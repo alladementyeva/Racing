@@ -5,97 +5,429 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MenuScreen" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconFerrari" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-d3-ait">
-                                <rect key="frame" x="378" y="100" width="60" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GoRacing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEk-Sa-bME">
-                                <rect key="frame" x="458" y="114" width="188" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-iH-XWz" customClass="GameButton" customModule="Race" customModuleProvider="target">
-                                <rect key="frame" x="362" y="300" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Yellow"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Start new game">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-h4-Mn0" customClass="GameButton" customModule="Race" customModuleProvider="target">
-                                <rect key="frame" x="362" y="390" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Yellow"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Results">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVi-Wk-QIf" customClass="GameButton" customModule="Race" customModuleProvider="target">
-                                <rect key="frame" x="362" y="480" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Yellow"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Un1-5z-7yd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wC3-B3-rSj" customClass="GameButton" customModule="Race" customModuleProvider="target">
-                                <rect key="frame" x="362" y="570" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Red"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuM-P8-9pv"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uw3-Re-Hls">
+                                <rect key="frame" x="378" y="128" width="268" height="83"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconFerrari" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-d3-ait">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="83"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="AI3-b7-XGR"/>
+                                            <constraint firstAttribute="height" constant="83" id="din-U1-0Xv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoRacing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEk-Sa-bME">
+                                        <rect key="frame" x="80" y="0.0" width="188" height="83"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="48"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Mv7-60-Gx9"/>
+                                    <constraint firstAttribute="width" constant="268" id="PZG-Ao-Pi8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="330" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="B0J-Hp-K0Y" userLabel="Buttons Stack View">
+                                <rect key="frame" x="362" y="289" width="300" height="330"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-iH-XWz" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                        <color key="backgroundColor" name="Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Stc-p1-UD8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="btE-Td-5Qo"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Start new game"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start new game">
+                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Q3w-qE-sJb" kind="show" id="ghL-UV-kxv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-h4-Mn0" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="60"/>
+                                        <color key="backgroundColor" name="Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="OjY-VE-DHf"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="bEb-dI-0HG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Results">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Hbj-OU-hus" kind="show" id="sll-iJ-oVg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVi-Wk-QIf" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="300" height="60"/>
+                                        <color key="backgroundColor" name="Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="RkX-i2-3sA"/>
+                                            <constraint firstAttribute="height" constant="60" id="WaQ-ng-Yk6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settingsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Un1-5z-7yd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC3-B3-rSj" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="270" width="300" height="60"/>
+                                        <color key="backgroundColor" name="Red"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="GHB-Z1-0Oy"/>
+                                            <constraint firstAttribute="height" constant="60" id="YUE-x3-jQ7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Exit">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuM-P8-9pv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kfl-iH-XWz" firstAttribute="leading" secondItem="B0J-Hp-K0Y" secondAttribute="leading" id="85o-18-h4E"/>
+                                    <constraint firstAttribute="trailing" secondItem="tVi-Wk-QIf" secondAttribute="trailing" id="Bwp-qY-CcV"/>
+                                    <constraint firstItem="dlD-h4-Mn0" firstAttribute="leading" secondItem="B0J-Hp-K0Y" secondAttribute="leading" id="KIb-pq-LGG"/>
+                                    <constraint firstItem="tVi-Wk-QIf" firstAttribute="leading" secondItem="B0J-Hp-K0Y" secondAttribute="leading" id="bJG-pA-WGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="wC3-B3-rSj" secondAttribute="trailing" id="dmI-ll-jON"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlD-h4-Mn0" secondAttribute="trailing" id="htS-oO-fby"/>
+                                    <constraint firstItem="wC3-B3-rSj" firstAttribute="leading" secondItem="B0J-Hp-K0Y" secondAttribute="leading" id="ldD-tG-PNf"/>
+                                    <constraint firstAttribute="height" constant="330" id="mk7-O7-YDZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="kfl-iH-XWz" secondAttribute="trailing" id="xoB-hd-yyh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Grey"/>
+                        <color key="backgroundColor" name="SpaceGrey"/>
                         <constraints>
-                            <constraint firstItem="wC3-B3-rSj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jmy-2S-HZv"/>
+                            <constraint firstItem="B0J-Hp-K0Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="70" id="46z-h0-L4Z"/>
+                            <constraint firstItem="Uw3-Re-Hls" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7sd-bR-ivw"/>
+                            <constraint firstItem="Uw3-Re-Hls" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-214.5" id="NdS-B7-r1B"/>
+                            <constraint firstItem="B0J-Hp-K0Y" firstAttribute="centerX" secondItem="Uw3-Re-Hls" secondAttribute="centerX" id="oHA-zR-yCH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YnP-K8-6a9"/>
+                    <connections>
+                        <outlet property="btExit" destination="wC3-B3-rSj" id="yRO-LF-oU1"/>
+                        <outlet property="btResult" destination="dlD-h4-Mn0" id="jtf-QH-DNI"/>
+                        <outlet property="btSettings" destination="tVi-Wk-QIf" id="MDE-C4-1DO"/>
+                        <outlet property="btStartNewGame" destination="kfl-iH-XWz" id="WRl-II-keC"/>
+                        <segue destination="c0V-TY-yxs" kind="show" identifier="segueSettingsToChangeCar" id="04U-JI-97I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="84"/>
+            <point key="canvasLocation" x="30" y="-17"/>
+        </scene>
+        <!--Game Screen-->
+        <scene sceneID="APj-tW-aQg">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Q3w-qE-sJb" userLabel="Game Screen" customClass="GameScreen" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sm5-cc-jLi">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="KjA-qQ-Sub">
+                                <rect key="frame" x="0.0" y="184" width="1024" height="454"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="finish_line" translatesAutoresizingMaskIntoConstraints="NO" id="wzs-60-Eox">
+                                <rect key="frame" x="974" y="184" width="50" height="454"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhO-Vq-o06" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                <rect key="frame" x="432" y="680" width="160" height="60"/>
+                                <color key="backgroundColor" name="Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NQA-rh-tRj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="Wpf-ZR-d6G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Drive">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="driveUserCarAction:" destination="Q3w-qE-sJb" eventType="touchUpInside" id="p0V-og-uYD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="sedan_blue" translatesAutoresizingMaskIntoConstraints="NO" id="pfd-Rw-h04">
+                                <rect key="frame" x="7" y="446" width="100" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="semafor" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-sg-v1w">
+                                <rect key="frame" x="360" y="30" width="32" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="3Jx-SD-Jtw"/>
+                                    <constraint firstAttribute="width" constant="32" id="Qv3-M0-7vk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="semafor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kn-Xn-PSS">
+                                <rect key="frame" x="400" y="38.5" width="136.5" height="48.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vCi-du-gvB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="42"/>
+                                <color key="textColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="last_24_hours" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-gA-Jz2">
+                                <rect key="frame" x="55" y="30" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="5Ne-13-4Pw"/>
+                                    <constraint firstAttribute="height" constant="65" id="a0H-qk-9SA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qof-f6-nNP">
+                                <rect key="frame" x="135" y="38" width="93.5" height="49"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSJ-AV-5sl" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                <rect key="frame" x="839" y="39" width="160" height="60"/>
+                                <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hZV-tF-MpC"/>
+                                    <constraint firstAttribute="height" constant="60" id="jvD-CR-Kr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameAction:" destination="Q3w-qE-sJb" eventType="touchUpInside" id="MCM-Cv-ned"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-wK-hio" customClass="GameButton" customModule="Race" customModuleProvider="target">
+                                <rect key="frame" x="36" y="680" width="160" height="60"/>
+                                <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="AUy-hn-Zkb"/>
+                                    <constraint firstAttribute="height" constant="60" id="d2a-ev-nVE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YNB-se-J9k"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="sport_car" translatesAutoresizingMaskIntoConstraints="NO" id="BhG-C5-OdV">
+                                <rect key="frame" x="7" y="231" width="100" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WJY-Go-LBT"/>
+                        <color key="backgroundColor" name="SpaceGrey"/>
+                        <constraints>
+                            <constraint firstItem="sSJ-AV-5sl" firstAttribute="top" secondItem="WJY-Go-LBT" secondAttribute="top" constant="39" id="6EQ-7d-jTw"/>
+                            <constraint firstItem="wzs-60-Eox" firstAttribute="top" secondItem="KjA-qQ-Sub" secondAttribute="top" id="9Er-fN-RXy"/>
+                            <constraint firstItem="WJY-Go-LBT" firstAttribute="trailing" secondItem="sSJ-AV-5sl" secondAttribute="trailing" constant="25" id="9ip-L1-HNW"/>
+                            <constraint firstItem="WJY-Go-LBT" firstAttribute="bottom" secondItem="0ga-wK-hio" secondAttribute="bottom" constant="28" id="9tr-UL-plk"/>
+                            <constraint firstItem="sSJ-AV-5sl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Kn-Xn-PSS" secondAttribute="trailing" constant="8" symbolic="YES" id="A4B-95-bcW"/>
+                            <constraint firstItem="mhO-Vq-o06" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0ga-wK-hio" secondAttribute="trailing" constant="8" symbolic="YES" id="GSX-Fa-IT1"/>
+                            <constraint firstItem="8Kn-Xn-PSS" firstAttribute="centerY" secondItem="qof-f6-nNP" secondAttribute="centerY" id="IZ2-Tx-98t"/>
+                            <constraint firstItem="8Kn-Xn-PSS" firstAttribute="leading" secondItem="p4g-sg-v1w" secondAttribute="trailing" constant="8" symbolic="YES" id="KC5-Rr-hmH"/>
+                            <constraint firstItem="p4g-sg-v1w" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qof-f6-nNP" secondAttribute="trailing" constant="8" symbolic="YES" id="MuA-gH-W5u"/>
+                            <constraint firstItem="p4g-sg-v1w" firstAttribute="centerX" secondItem="WJY-Go-LBT" secondAttribute="centerX" constant="-136" id="SYH-zA-YEw"/>
+                            <constraint firstItem="p4g-sg-v1w" firstAttribute="top" secondItem="4iD-gA-Jz2" secondAttribute="top" id="Sj1-JL-T2W"/>
+                            <constraint firstItem="wzs-60-Eox" firstAttribute="bottom" secondItem="KjA-qQ-Sub" secondAttribute="bottom" id="TmQ-FQ-gsp"/>
+                            <constraint firstItem="4iD-gA-Jz2" firstAttribute="top" secondItem="WJY-Go-LBT" secondAttribute="top" constant="30" id="TwU-nh-XKi"/>
+                            <constraint firstItem="WJY-Go-LBT" firstAttribute="bottom" secondItem="mhO-Vq-o06" secondAttribute="bottom" constant="28" id="Uzr-N1-jA9"/>
+                            <constraint firstItem="0ga-wK-hio" firstAttribute="leading" secondItem="WJY-Go-LBT" secondAttribute="leading" constant="36" id="YhO-Jn-kit"/>
+                            <constraint firstItem="KjA-qQ-Sub" firstAttribute="centerX" secondItem="WJY-Go-LBT" secondAttribute="centerX" id="ZRl-uv-qQm"/>
+                            <constraint firstItem="qof-f6-nNP" firstAttribute="top" secondItem="WJY-Go-LBT" secondAttribute="top" constant="38" id="afW-SI-285"/>
+                            <constraint firstItem="WJY-Go-LBT" firstAttribute="trailing" secondItem="wzs-60-Eox" secondAttribute="trailing" id="dnU-Wk-P1h"/>
+                            <constraint firstItem="KjA-qQ-Sub" firstAttribute="leading" secondItem="WJY-Go-LBT" secondAttribute="leading" id="eOf-P0-xH1"/>
+                            <constraint firstItem="4iD-gA-Jz2" firstAttribute="leading" secondItem="WJY-Go-LBT" secondAttribute="leading" constant="55" id="f6Z-3k-90F"/>
+                            <constraint firstItem="KjA-qQ-Sub" firstAttribute="trailing" secondItem="WJY-Go-LBT" secondAttribute="trailing" id="hk4-D9-DgT"/>
+                            <constraint firstItem="mhO-Vq-o06" firstAttribute="centerX" secondItem="WJY-Go-LBT" secondAttribute="centerX" id="nyj-zR-7nS"/>
+                            <constraint firstItem="qof-f6-nNP" firstAttribute="leading" secondItem="4iD-gA-Jz2" secondAttribute="trailing" constant="15" id="odm-Zg-FfU"/>
+                            <constraint firstItem="KjA-qQ-Sub" firstAttribute="centerY" secondItem="WJY-Go-LBT" secondAttribute="centerY" constant="27" id="pmu-wg-r8b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A9V-5f-5A6"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="btBack" destination="0ga-wK-hio" id="x6M-iD-AwF"/>
+                        <outlet property="btDrive" destination="mhO-Vq-o06" id="SdO-6c-69L"/>
+                        <outlet property="btStart" destination="sSJ-AV-5sl" id="6J0-yH-XfH"/>
+                        <outlet property="finishLine" destination="wzs-60-Eox" id="j7S-ah-8gM"/>
+                        <outlet property="pcCar" destination="BhG-C5-OdV" id="1mr-d8-jQe"/>
+                        <outlet property="semaforLabel" destination="8Kn-Xn-PSS" id="yw9-AL-teL"/>
+                        <outlet property="timerLabel" destination="qof-f6-nNP" id="m6C-jL-faS"/>
+                        <outlet property="userCar" destination="pfd-Rw-h04" id="qQ0-GP-4Wy"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToMenu" id="IvH-q0-BI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VW8-0h-Pu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.882812499999996" y="794.53125"/>
+        </scene>
+        <!--Change Car Collection View Controller-->
+        <scene sceneID="VjS-iS-Jvf">
+            <objects>
+                <collectionViewController modalPresentationStyle="formSheet" id="c0V-TY-yxs" customClass="ChangeCarCollectionViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="8S0-IJ-VBM">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="SpaceGrey"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dNk-VF-QN8">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hIl-97-WZb" userLabel="Cell" customClass="ChangeCarCollectionViewCell" customModule="Race" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qJU-bD-PuH">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sedan_blue" translatesAutoresizingMaskIntoConstraints="NO" id="GGk-EA-Got">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="carPicture" destination="GGk-EA-Got" id="r1Q-rD-fnb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="c0V-TY-yxs" id="mSm-nQ-522"/>
+                            <outlet property="delegate" destination="c0V-TY-yxs" id="0bv-yn-2bD"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="i2Q-uc-vKi"/>
+                    <size key="freeformSize" width="500" height="80"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZ3-VR-duM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.734375" y="-17.1875"/>
+        </scene>
+        <!--Result Table View Controller-->
+        <scene sceneID="5eN-SK-izU">
+            <objects>
+                <tableViewController id="Hbj-OU-hus" customClass="ResultTableViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dck-aV-6Wi">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="row" id="Q91-hr-0zO" customClass="ResultTableViewCell" customModule="Race" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="704" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q91-hr-0zO" id="LZK-D8-nLq">
+                                    <rect key="frame" x="0.0" y="0.0" width="704" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameResult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Bw-m70">
+                                            <rect key="frame" x="265" y="12" width="93" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-aY-SNR">
+                                            <rect key="frame" x="500" y="12" width="81" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajw-jl-OdR" userLabel="Player Name">
+                                            <rect key="frame" x="20" y="13" width="237" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="baseline" secondItem="lXZ-aY-SNR" secondAttribute="baseline" id="067-6D-6IX"/>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="firstBaseline" secondItem="lXZ-aY-SNR" secondAttribute="firstBaseline" id="3UD-Vl-c6N"/>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="leading" secondItem="LZK-D8-nLq" secondAttribute="leading" constant="265" id="EPu-Cy-SQp"/>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="leading" secondItem="ajw-jl-OdR" secondAttribute="trailing" constant="8" symbolic="YES" id="JgJ-Sg-ecn"/>
+                                        <constraint firstItem="ajw-jl-OdR" firstAttribute="top" secondItem="LZK-D8-nLq" secondAttribute="topMargin" constant="2" id="RzP-Ms-X6H"/>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="top" secondItem="LZK-D8-nLq" secondAttribute="topMargin" constant="1" id="UcJ-kG-3r4"/>
+                                        <constraint firstItem="ajw-jl-OdR" firstAttribute="leading" secondItem="LZK-D8-nLq" secondAttribute="leadingMargin" id="VVe-Un-kP2"/>
+                                        <constraint firstItem="lXZ-aY-SNR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7JD-Bw-m70" secondAttribute="trailing" constant="8" symbolic="YES" id="euK-MI-sAw"/>
+                                        <constraint firstAttribute="trailing" secondItem="lXZ-aY-SNR" secondAttribute="trailing" constant="123" id="pbp-q6-BWv"/>
+                                        <constraint firstItem="7JD-Bw-m70" firstAttribute="centerY" secondItem="LZK-D8-nLq" secondAttribute="centerY" id="qku-Dr-VHb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gameResult" destination="7JD-Bw-m70" id="7P6-Zy-dpc"/>
+                                    <outlet property="playerName" destination="ajw-jl-OdR" id="Zv1-aA-Pbt"/>
+                                    <outlet property="timeResult" destination="lXZ-aY-SNR" id="QfT-p2-Us9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hbj-OU-hus" id="Aii-lV-kzo"/>
+                            <outlet property="delegate" destination="Hbj-OU-hus" id="dOc-pZ-Rva"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zqv-cf-rxL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KuW-j9-3Rv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="795"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YNB-se-J9k"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="finish_line" width="50" height="454"/>
         <image name="iconFerrari" width="195" height="268"/>
-        <namedColor name="Grey">
-            <color red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="last_24_hours" width="65" height="65"/>
+        <image name="road" width="1024" height="454"/>
+        <image name="sedan_blue" width="100" height="51"/>
+        <image name="semafor" width="32" height="73"/>
+        <image name="sport_car" width="100" height="33"/>
+        <namedColor name="Green">
+            <color red="0.29800000786781311" green="0.7369999885559082" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Red">
-            <color red="0.92941176470588238" green="0.10588235294117647" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92900002002716064" green="0.10599999874830246" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SpaceGrey">
+            <color red="0.21600000560283661" green="0.27799999713897705" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Yellow">
-            <color red="0.99215686274509807" green="0.94117647058823528" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99199998378753662" green="0.94099998474121094" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

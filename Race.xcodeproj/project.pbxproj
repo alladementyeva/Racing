@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		CE97089F28F5E6B200390B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97089E28F5E6B200390B85 /* AppDelegate.swift */; };
 		CE9708A128F5E6B200390B85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708A028F5E6B200390B85 /* SceneDelegate.swift */; };
-		CE9708A328F5E6B200390B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708A228F5E6B200390B85 /* ViewController.swift */; };
+		CE9708A328F5E6B200390B85 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708A228F5E6B200390B85 /* MenuScreen.swift */; };
 		CE9708A628F5E6B200390B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9708A428F5E6B200390B85 /* Main.storyboard */; };
 		CE9708A828F5E6B800390B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9708A728F5E6B800390B85 /* Assets.xcassets */; };
 		CE9708AB28F5E6B800390B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9708A928F5E6B800390B85 /* LaunchScreen.storyboard */; };
 		CE9708B328F7668B00390B85 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708B228F7668B00390B85 /* GameButton.swift */; };
+		CE9708B728FA017F00390B85 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708B628FA017F00390B85 /* GameScreen.swift */; };
+		CE9708B928FE18B300390B85 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708B828FE18B300390B85 /* ResultTableViewController.swift */; };
+		CE9708BB28FE1D0400390B85 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708BA28FE1D0400390B85 /* ResultTableViewCell.swift */; };
+		CE9708BF28FE264300390B85 /* ChangeCarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708BE28FE264300390B85 /* ChangeCarCollectionViewController.swift */; };
+		CE9708C128FE277B00390B85 /* ChangeCarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9708C028FE277B00390B85 /* ChangeCarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE97089B28F5E6B200390B85 /* Race.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Race.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE97089E28F5E6B200390B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9708A028F5E6B200390B85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE9708A228F5E6B200390B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE9708A228F5E6B200390B85 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		CE9708A528F5E6B200390B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9708A728F5E6B800390B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9708AA28F5E6B800390B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9708AC28F5E6B800390B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9708B228F7668B00390B85 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		CE9708B628FA017F00390B85 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		CE9708B828FE18B300390B85 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		CE9708BA28FE1D0400390B85 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		CE9708BE28FE264300390B85 /* ChangeCarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCarCollectionViewController.swift; sourceTree = "<group>"; };
+		CE9708C028FE277B00390B85 /* ChangeCarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,15 @@
 			isa = PBXGroup;
 			children = (
 				CE9708B228F7668B00390B85 /* GameButton.swift */,
+				CE9708B628FA017F00390B85 /* GameScreen.swift */,
 				CE97089E28F5E6B200390B85 /* AppDelegate.swift */,
 				CE9708A028F5E6B200390B85 /* SceneDelegate.swift */,
-				CE9708A228F5E6B200390B85 /* ViewController.swift */,
+				CE9708A228F5E6B200390B85 /* MenuScreen.swift */,
+				CE9708BE28FE264300390B85 /* ChangeCarCollectionViewController.swift */,
 				CE9708A428F5E6B200390B85 /* Main.storyboard */,
+				CE9708C028FE277B00390B85 /* ChangeCarCollectionViewCell.swift */,
+				CE9708B828FE18B300390B85 /* ResultTableViewController.swift */,
+				CE9708BA28FE1D0400390B85 /* ResultTableViewCell.swift */,
 				CE9708A728F5E6B800390B85 /* Assets.xcassets */,
 				CE9708A928F5E6B800390B85 /* LaunchScreen.storyboard */,
 				CE9708AC28F5E6B800390B85 /* Info.plist */,
@@ -141,10 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9708A328F5E6B200390B85 /* ViewController.swift in Sources */,
+				CE9708A328F5E6B200390B85 /* MenuScreen.swift in Sources */,
+				CE9708BF28FE264300390B85 /* ChangeCarCollectionViewController.swift in Sources */,
+				CE9708B728FA017F00390B85 /* GameScreen.swift in Sources */,
+				CE9708BB28FE1D0400390B85 /* ResultTableViewCell.swift in Sources */,
+				CE9708B928FE18B300390B85 /* ResultTableViewController.swift in Sources */,
 				CE9708B328F7668B00390B85 /* GameButton.swift in Sources */,
 				CE97089F28F5E6B200390B85 /* AppDelegate.swift in Sources */,
 				CE9708A128F5E6B200390B85 /* SceneDelegate.swift in Sources */,
+				CE9708C128FE277B00390B85 /* ChangeCarCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Race/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Гонки";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Race/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Гонки";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
