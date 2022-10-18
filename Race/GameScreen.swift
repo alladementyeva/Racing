@@ -30,7 +30,7 @@ class GameScreen: UIViewController {
     let stateGreen: Int = 1
     let stateRed: Int = 2
     
-    let userCarStep: CGFloat = 100
+    let userCarStep: CGFloat = 10
     let pcCarStep: CGFloat = 10
     
     override func viewDidLoad() {
@@ -56,8 +56,8 @@ class GameScreen: UIViewController {
         
         // print( "startGameAction" )
         // output semafor label
-        switchSemafor()
-        switchSemafor()
+        switchSemafor()         // semafor starts with RED
+        // switchSemafor()      // now with GREEN
         
         btStart.enable(false)
         btBack.enable(false)
@@ -83,15 +83,15 @@ class GameScreen: UIViewController {
     @objc func switchSemafor() {
         ///if stateSemafor >= stateRed {stateSemafor = 0}
         // stateSemafor += 1
-        if stateSemafor == 1
+        if stateSemafor == stateGreen
         {
-            stateSemafor = 2
+            stateSemafor = stateRed
          }
         else {
-            stateSemafor = 1
+            stateSemafor = stateGreen
         }
   
-        print( stateSemafor )
+        // print( stateSemafor )
         
         switch stateSemafor {
         case stateGreen:
