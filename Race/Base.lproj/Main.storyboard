@@ -6,7 +6,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -296,7 +295,7 @@
             <objects>
                 <collectionViewController modalPresentationStyle="formSheet" id="c0V-TY-yxs" customClass="ChangeCarCollectionViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="8S0-IJ-VBM">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SpaceGrey"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dNk-VF-QN8">
@@ -306,19 +305,20 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hIl-97-WZb" userLabel="Cell" customClass="ChangeCarCollectionViewCell" customModule="Race" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="Cell" id="hIl-97-WZb" userLabel="Cell" customClass="ChangeCarCollectionViewCell" customModule="Race" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qJU-bD-PuH">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sedan_blue" translatesAutoresizingMaskIntoConstraints="NO" id="GGk-EA-Got">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sedan_blue" id="GGk-EA-Got">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </imageView>
                                     </subviews>
-                                </collectionViewCellContentView>
+                                </view>
                                 <connections>
                                     <outlet property="carPicture" destination="GGk-EA-Got" id="r1Q-rD-fnb"/>
                                 </connections>
@@ -330,7 +330,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="i2Q-uc-vKi"/>
-                    <size key="freeformSize" width="500" height="80"/>
+                    <size key="freeformSize" width="500" height="100"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZ3-VR-duM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

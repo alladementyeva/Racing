@@ -49,9 +49,15 @@ class ChangeCarCollectionViewController: UICollectionViewController {
         let imageName = cars[indexPath.item]
         let image = UIImage(named: imageName)
         
-        cell.carPicture.image = image
-        cell.carPicture.contentMode = .scaleAspectFit
         
+        // var CM = cell.carPicture.contentMode
+        // print( "ContentMode1 = \(cell.carPicture.contentMode.rawValue )")
+        // cell.carPicture.image = image?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: UIImage.ResizingMode.stretch)
+
+        cell.carPicture.image = image
+        //cell.carPicture.autoresizesSubviews = true
+        //cell.carPicture.contentMode = .scaleAspectFit
+                
         return cell
     }
 
@@ -68,9 +74,16 @@ class ChangeCarCollectionViewController: UICollectionViewController {
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
     
-        collectionView.reloadData()
-        collectionView.cellForItem(at: indexPath)?.backgroundColor = .blue
+        // aunselect all and highlihgt the selected item
+        // collectionView.reloadData() // ???
+        // collectionView.cellForItem(at: indexPath)?.backgroundColor = .blue
+        
+        // save the selection (in global var)
         userCarImage = cars[indexPath.item]
+        
+        //print("Aspect fit = \(String(describing: collectionView.cellForItem(at: indexPath)?.contentMode.rawValue))")  // Aspect fit = Optional(4)
+        //print("ContentMode3 = \(String(describing: collectionView.cellForItem(at: indexPath)?.contentMode.rawValue))") // Aspect fit = Optional(-7145497755731253031)
+        //var CM = collectionView.cellForItem(at: indexPath)?.contentMode
         
         // for debug:
         let alert = UIAlertController(title: "Car change", message: "Car changed", preferredStyle: .alert)
