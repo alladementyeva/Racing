@@ -41,7 +41,58 @@ class ChangeCarCollectionViewController: UICollectionViewController {
         // return the number of items
         return cars.count
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> ChangeCarCollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChangeCarCollectionViewCell
+        
+        // Configure the cell
+        let imageName = cars[indexPath.item]
+        let image = UIImage(named: imageName)
+        
+        cell.carPicture.image = image
+        cell.carPicture.contentMode = .scaleAspectFit
+        
+        if cars[indexPath.item] == userCarImage {
+            cell.backgroundColor = UIColor(named:"Grey")
+        }
+            
+        return cell
+    }
 
+    // MARK: UICollectionViewDelegate
+
+    /*
+    // Uncomment this method to specify if the specified item should be highlighted during tracking
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    */
+
+    
+    // Uncomment this method to specify if the specified item should be selected
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    
+        // remove selection from all cells
+        for item in 0..<collectionView.numberOfItems(inSection: 0){
+            collectionView.cellForItem(at: IndexPath(row:item, section:0))?.backgroundColor = UIColor(named:"SpaceGrey")
+        }
+                          
+        // select the selected cell
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor(named:"Grey")
+        
+        // save the selection in global var
+        userCarImage = cars[indexPath.item]
+        
+        // for debug:
+        let alert = UIAlertController(title: "Car change", message: "Car changed", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        return true
+    }/*
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> ChangeCarCollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChangeCarCollectionViewCell
         
@@ -94,6 +145,7 @@ class ChangeCarCollectionViewController: UICollectionViewController {
         
         return true
     }
+    */
     
 
     /*

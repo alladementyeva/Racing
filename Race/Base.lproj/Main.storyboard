@@ -295,7 +295,7 @@
             <objects>
                 <collectionViewController modalPresentationStyle="formSheet" id="c0V-TY-yxs" customClass="ChangeCarCollectionViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="8S0-IJ-VBM">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SpaceGrey"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dNk-VF-QN8">
@@ -330,7 +330,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="i2Q-uc-vKi"/>
-                    <size key="freeformSize" width="500" height="100"/>
+                    <size key="freeformSize" width="500" height="150"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZ3-VR-duM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,25 +341,25 @@
             <objects>
                 <tableViewController id="Hbj-OU-hus" customClass="ResultTableViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dck-aV-6Wi">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="row" id="Q91-hr-0zO" customClass="ResultTableViewCell" customModule="Race" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="704" height="45"/>
+                                <rect key="frame" x="0.0" y="44.5" width="1024" height="45.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q91-hr-0zO" id="LZK-D8-nLq">
-                                    <rect key="frame" x="0.0" y="0.0" width="704" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="45.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameResult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Bw-m70">
-                                            <rect key="frame" x="265" y="12" width="93" height="21"/>
+                                            <rect key="frame" x="265" y="12" width="93" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-aY-SNR">
-                                            <rect key="frame" x="500" y="12" width="81" height="21"/>
+                                            <rect key="frame" x="820" y="12" width="81" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
