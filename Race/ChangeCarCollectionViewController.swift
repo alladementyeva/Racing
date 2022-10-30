@@ -92,26 +92,8 @@ class ChangeCarCollectionViewController: UICollectionViewController {
         self.present(alert, animated: true, completion: nil)
         
         return true
-    }/*
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> ChangeCarCollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChangeCarCollectionViewCell
-        
-        // Configure the cell
-        let imageName = cars[indexPath.item]
-        let image = UIImage(named: imageName)
-        
-        
-        // var CM = cell.carPicture.contentMode
-        // print( "ContentMode1 = \(cell.carPicture.contentMode.rawValue )")
-        // cell.carPicture.image = image?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: UIImage.ResizingMode.stretch)
-
-        cell.carPicture.image = image
-        //cell.carPicture.autoresizesSubviews = true
-        //cell.carPicture.contentMode = .scaleAspectFit
-                
-        return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -121,40 +103,14 @@ class ChangeCarCollectionViewController: UICollectionViewController {
     }
     */
 
-    
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-    
-        // aunselect all and highlihgt the selected item
-        // collectionView.reloadData() // ???
-        // collectionView.cellForItem(at: indexPath)?.backgroundColor = .blue
-        
-        // save the selection (in global var)
-        userCarImage = cars[indexPath.item]
-        
-        //print("Aspect fit = \(String(describing: collectionView.cellForItem(at: indexPath)?.contentMode.rawValue))")  // Aspect fit = Optional(4)
-        //print("ContentMode3 = \(String(describing: collectionView.cellForItem(at: indexPath)?.contentMode.rawValue))") // Aspect fit = Optional(-7145497755731253031)
-        //var CM = collectionView.cellForItem(at: indexPath)?.contentMode
-        
-        // for debug:
-        let alert = UIAlertController(title: "Car change", message: "Car changed", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-        return true
-    }
-    */
-    
-
+ 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         return false
     }
 
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return false
     }
 
@@ -162,5 +118,6 @@ class ChangeCarCollectionViewController: UICollectionViewController {
     
     }
     */
+ 
 
 }

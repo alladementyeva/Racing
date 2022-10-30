@@ -295,7 +295,7 @@
             <objects>
                 <collectionViewController modalPresentationStyle="formSheet" id="c0V-TY-yxs" customClass="ChangeCarCollectionViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="8S0-IJ-VBM">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="130"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SpaceGrey"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dNk-VF-QN8">

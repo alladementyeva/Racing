@@ -26,16 +26,26 @@ class GameScreen: UIViewController {
     var gameTimer = Timer()
     var gameTime: Int = 0
 
+    
     var stateSemafor: Int = 1
     let stateGreen: Int = 1
     let stateRed: Int = 2
     
-    let userCarStep: CGFloat = 10
+    let userCarStep: CGFloat = 100
     let pcCarStep: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+        // playerName is required for Result screen
+        if let _ = playerName {
+            // ok, playerName is not null
+        } else {
+            playerName = db.string(forKey: "playerName") ?? ""
+        }
+         */
+    
         btStart.enable(true)
         btBack.enable(true)
         btDrive.enable(false)
@@ -160,6 +170,7 @@ class GameScreen: UIViewController {
             
             results.append(resultData(playerName: "me", gameResult: "asdf", timeResult: "1234"))
   */
+
         results.append(resultData(playerName: playerName!, gameResult: message, timeResult: Secs2MinSec(gameTime)))
         
         ac.addAction(confirmAction)

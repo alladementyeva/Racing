@@ -21,7 +21,14 @@ class MenuScreen: UIViewController {
     var db = UserDefaults.standard
  //   var playerName: String?
  //   var userCar: String?
-
+/*
+    convenience init() {
+ 
+        self.init(nibName:nil, bundle:nil)
+        playerName = db.string(forKey: "playerName")
+        print("playerName = \(playerName)")
+    }
+*/
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,8 +43,15 @@ class MenuScreen: UIViewController {
         btExit.layer.cornerRadius = 10
          */
         
-        playerName = db.string(forKey: "playerName")
+        playerName = db.string(forKey: "playerName") // ?? ""
         // print(db.string(forKey: "playerName") as Any)
+        
+        if playerName != nil {
+            // ok
+        } else {
+            // disable Start
+            btStartNewGame.enable(false)
+        }
     }
 
     @IBAction func settingsAction(_ sender: UIButton) {
@@ -56,6 +70,8 @@ class MenuScreen: UIViewController {
         let saveAction = UIAlertAction(title: "Confirm", style: .default) { [self] (action) in
             self.db.set(playerName, forKey: "playerName")
             playerName = alert.textFields![0].text
+            // now playerName is not null (even if empty)
+            btStartNewGame.enable(true)
         }
   
         alert.addAction( saveAction )
